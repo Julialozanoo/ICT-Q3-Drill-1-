@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Grade Calculator</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: rgb(230, 230, 230);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background: rgb(141, 3, 23);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(90,0,0,0.99);
+        }
+
+        h2 {
+            color: #ffffff; 
+            margin-bottom: 15px;
+            font-size: 28px;
+            text-shadow: 1px 1px #fff;
+        }
+
+        h3 {
+            color: rgb(255, 255, 255);
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="number"] {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border: 1px solid #f1f1f1;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus {
+            border-color: rgb(245, 245, 245);
+            box-shadow: 0 0 5px rgba(99, 4, 4, 0.5);
+            outline: none;
+        }
+
+        input[type="button"] {
+            width: 95%;
+            padding: 12px;
+            margin-top: 15px;
+            border-radius: 10px;
+            border: none;
+            font-weight: bold;
+            font-size: 16px;
+            background: maroon;
+            color: black;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="button"]:hover {
+            background: rgb(238, 238, 238);
+            transform: scale(1.05);
+        }
+        .output {
+            background: #ffffff;
+            border: 2px solid rgb(99, 5, 5);
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 12px;
+            text-align: left;
+            white-space: pre-wrap;
+            color: #5f0404;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            font-family: monospace;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>General Average Calculator</h2>
+
+    <input type="text" id="fname" placeholder="First Name">
+    <input type="text" id="lname" placeholder="Last Name">
+
+    <h3>Enter Your Grades:</h3>
+    <input type="number" id="science" placeholder="Science">
+    <input type="number" id="english" placeholder="English">
+    <input type="number" id="filipino" placeholder="Filipino">
+    <input type="number" id="ict" placeholder="ICT">
+    <input type="number" id="pe" placeholder="PE">
+
+    <input type="button" value="Calculate GWA" py-click="calculating_gwa">
+
+    <div id="output" class="output"></div>
+</div>
+<py-script src="main.py"></py-script>
+</body>
+</html>
+
